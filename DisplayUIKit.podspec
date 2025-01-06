@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'DisplayUIKit'
-  spec.version      = '1.0'
+  spec.version      = '1.1'
   spec.license      =  { :type => 'BSD' }
   spec.homepage     = 'http://asyncdisplaykit.org'
   spec.authors      = { 'Scott Goodson' => 'scottgoodson@gmail.com' }
@@ -42,19 +42,6 @@ Pod::Spec.new do |spec|
     ]
     core.xcconfig = { 'GCC_PRECOMPILE_PREFIX_HEADER' => 'YES' }
   end
-
-
-  spec.subspec 'IGListKit' do |igl|
-      igl.dependency 'IGListKit', '2.1.0'
-      igl.dependency 'DisplayUIKit/Core'
-  end
-
-  spec.subspec 'Yoga' do |yoga|
-      yoga.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) YOGA=1' }
-      yoga.dependency 'Yoga', '1.0.2'
-      yoga.dependency 'DisplayUIKit/Core'
-  end
-
 
   spec.social_media_url = 'https://twitter.com/AsyncDisplayKit'
   spec.library = 'c++'
